@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: `https://course-drop.vercel.app`,
+    origin: 'https://course-drop.vercel.app',
     credentials: true,
     maxAge: 14400,
   })
