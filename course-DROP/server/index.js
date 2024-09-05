@@ -21,13 +21,15 @@ const PORT = process.env.PORT || 4000;
 database.connect();
 
 app.use(express.json());
-app.use(cookieParser()); 
+app.use(cookieParser());
 
 app.use(
   cors({
     origin: 'https://course-drop.vercel.app',
     credentials: true,
     maxAge: 14400,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
 
